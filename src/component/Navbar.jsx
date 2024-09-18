@@ -1,6 +1,19 @@
-import React from 'react'
+import { onAuthStateChanged ,signOut} from 'firebase/auth';
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { auth } from '../config/firebase-config.js';
+
 
 const Navbar = () => {
+
+
+let navigate = useNavigate()
+  
+
+
+
+
+
   return (
     <>
     <div className="navbar bg-base-100">
@@ -12,7 +25,7 @@ const Navbar = () => {
       <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
     </div>
     {}
-    <div className="dropdown dropdown-end">
+    {/* <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img
@@ -32,7 +45,7 @@ const Navbar = () => {
         <li><a>Settings</a></li>
         <li><a>Logout</a></li>
       </ul>
-    </div>
+    </div> */}
   </div>
 </div>
     </>
